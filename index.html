@@ -7,7 +7,6 @@
     <!-- points to the regular HTML version or to self if no such HTML version exists -->
     <link rel="canonical" href="http://en--dash.tumblr.com" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" >
-    <link href='https://fonts.googleapis.com/css?family=Georgia|Open+Sans|Roboto' rel='stylesheet' type='text/css'>
     <!-- schema required for Google search news carousel -->
     <script type="application/ld+json">
       {
@@ -44,6 +43,10 @@
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <!-- extended components and fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Georgia|Open+Sans|Roboto' rel='stylesheet' type='text/css'>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
     <style amp-custom>
       /* any custom style goes here */
       body {
@@ -81,6 +84,23 @@
           <!-- Must include an explicit width and height. -->
           <amp-img src="images/corgi.png" alt="Welcome" height="400" width="600"></amp-img>
         </figure>
+
+        <h2>Iframe</h2>
+        <amp-iframe width=300 height=300
+            sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+            layout="responsive"
+            frameborder="0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDG9YXIhKBhqclZizcSzJ0ROiE0qgVfwzI&q=Alameda,%20CA">
+        </amp-iframe>
+
+
+        <h2>Instagram</h2>
+        <amp-instagram
+            data-shortcode="fBwFP"
+            width="320"
+            height="392"
+            layout="responsive">
+        </amp-instagram>
       </article>
     </main>
   </body>
