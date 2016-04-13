@@ -46,13 +46,19 @@
     <!-- extended components and fonts-->
     <link href='https://fonts.googleapis.com/css?family=Georgia|Open+Sans|Roboto' rel='stylesheet' type='text/css'>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
     <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
     <style amp-custom>
       /* any custom style goes here */
       body {
         background-color: white;
         margin: 0;
-        font-family: 'Georgia', Serif;
+        font-family: 'Open Sans';
+        text-align: center;
+        background: #EBC79E;
+      }
+      main {
+        padding-bottom: 30px;
       }
       .centered {
         display: flex;
@@ -61,12 +67,26 @@
         justify-content: center;
         align-items: center;
       }
-      .brand-logo {
-        font-family: 'Open Sans';
+      .title {
+        font-family: 'Georgia', Serif;
+        font-size: 150%;
+        color: #EE7621;
       }
-      amp-img {
-        background-color: yellow;
-        border: 1px solid black;
+      .img-container {
+        background-color: #EE7621;
+        padding: 20px;
+      }
+      .tumblr {
+        -ms-zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: center 0;
+        -o-transform: scale(0.75);
+        -o-transform-origin: center 0;
+        -webkit-transform: scale(0.75);
+        -webkit-transform-origin: center 0;
+      }
+      .iframe-wrap {
+        margin: 0 auto;
       }
     </style>
     <!-- MUST be last child in <head> -->
@@ -74,34 +94,49 @@
   </head>
   <body>
     <header>
-      <div class="brand-logo centered">
+      <div class="title centered">
         <h1>corgi power!</h1>
       </div>
     </header>
     <main class="centered" role="main">
       <article>
-        <figure>
+        <figure class="img-container">
           <!-- Must include an explicit width and height. -->
-          <amp-img src="images/corgi.png" alt="Welcome" height="400" width="600"></amp-img>
+          <amp-img
+          src="images/corgi.png"
+            alt="Welcome"
+            height=400
+            width=600></amp-img>
         </figure>
 
-        <h2>follow me</h2>
-        <amp-instagram
+        <h2>what i follow</h2>
+        <amp-instagram width="320" height="392"
+            media="(min-width: 650px)"
             data-shortcode="BD9RfEsJqyu"
-            width="320"
-            height="392"
-            layout="responsive">
+        >
         </amp-instagram>
+        <amp-twitter width=390 height=300
+            data-tweetid="658276641160962049">
+        </amp-twitter>
 
+        <h2>what i'm about</h2>
+        <div class="iframe-wrap">
+            <amp-iframe width=500 height=300
+                class="tumblr"
+                sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                layout="responsive"
+                frameborder="0"
+                src="https://corgiscorgiscorgis.tumblr.com">
+            </amp-iframe>
+        </div>
 
-        <h2>where i live</h2>
-        <amp-iframe width=300 height=300
+        <h2>where i live</h2> <!-- AIzaSyBrCXawvA7mZDfUFJR_-g8D_QkVVTXgtEY -->
+        <amp-iframe width=300 height=200
             sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
             layout="responsive"
             frameborder="0"
             src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJy2zuZqFZwokRpsEdvDQCstk&key=AIzaSyDG9YXIhKBhqclZizcSzJ0ROiE0qgVfwzI">
         </amp-iframe>
-
 
       </article>
     </main>
